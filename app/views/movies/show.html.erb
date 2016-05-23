@@ -3,6 +3,7 @@
     <div class='row'>
       <div class='col-md-4'>
       <%= image_tag @movie.image.url(:medium) %>
+      <div class='star-rating' data-score= <%= @avg_review%> ></div>
       <div class='table-responsive'>
         <table class='table'>
           <tbody>
@@ -44,12 +45,12 @@
           <!-- <p><%#= review.rating %></p> -->
           <div class='star-rating' data-score=<%=review.rating%> ></div>
           <p><%= review.comment %></p>
-          <%end%>
-          <%end%>
         </div>
+          <%end%>
+          <%end%>
       </div>
+    </div>
   </div>
-</div>
 </div>
 
 <%#= image_tag @movie.image.url(:medium) %>
@@ -65,11 +66,6 @@ $('.star-rating').raty({
 </script>
 <!-- <div></div> -->
 
-<script src="jquery.raty.js">
-$('.star-rating').raty('score');
-</script>
-
-<div></div>
 
 
 
